@@ -9,7 +9,6 @@
 #define SRC_CRC32_H_
 
 #include <stddef.h>
-
 #include "stdint.h"
 
 class CRC32 {
@@ -24,7 +23,7 @@ class CRC32 {
     void setDivisor(uint32_t divisor);
 
    private:
-    const uint16_t CRC32_TABLE_SIZE = 256;
+    static const uint16_t CRC32_TABLE_SIZE = 256;
     uint32_t *crc32_table = nullptr;
     const uint32_t DEFAULT_DIVISOR = 0xEDB88320;
     uint32_t divisor = DEFAULT_DIVISOR;

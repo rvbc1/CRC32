@@ -9,9 +9,6 @@
 
 #include "CRC32.h"
 
-#include <stddef.h>
-#include <stdint.h>
-
 uint32_t CRC32::getCRC32(uint8_t *data, size_t size) {
     if (mode == FAST) {
         return crc32_fast(data, size);
