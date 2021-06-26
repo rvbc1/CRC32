@@ -9,7 +9,7 @@ int main() {
     CRC32 crc32(CRC32::FAST);
     uint32_t poly = 0x1EDC6F41;
 
-    //This CRC32 Algorithm is lsb-first implementation. For use "normal" (msb-first) representation Polynomial(Divisor) use BitReverse.
+    //This CRC32 Algorithm is lsb-first implementation. For "normal" (msb-first) representation Polynomial(Divisor) use BitReverse.
     BitReverse bitReverser(BitReverse::FAST);
     crc32.setDivisor(bitReverser.getReversed(poly));
 
