@@ -42,8 +42,8 @@ uint32_t CRC32::crc32(uint8_t *data, size_t size) {
 }
 
 void CRC32::build_crc32_table(void) {
-    if(crc32_table != nullptr){
-        delete crc32_table;
+    if(crc32_table){
+        delete[] crc32_table;
     }
 
     crc32_table = new uint32_t[CRC32_TABLE_SIZE];
